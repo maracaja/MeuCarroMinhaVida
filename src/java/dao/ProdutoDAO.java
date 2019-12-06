@@ -57,7 +57,6 @@ public class ProdutoDAO
         fotoNula[1] = String.format("%s, urlFoto2 = ?%s", (p.getUrlFoto2() == null ? " /*" : ""), (p.getUrlFoto2() == null ? "*/" : ""));
         fotoNula[2] = String.format("%s, urlFoto3 = ?%s", (p.getUrlFoto3() == null ? " /*" : ""), (p.getUrlFoto3() == null ? "*/" : ""));
         String sql = String.format("UPDATE Produto SET ativo = ?, marca = ?, modelo = ?, ano = ?, novo = ?, descricao = ?, preco = ?%s%s%s WHERE id = ?", fotoNula[0], fotoNula[1], fotoNula[2]);
-        System.out.println(sql);
         try (PreparedStatement ps = dataSource.getConexao().prepareStatement(sql))
         {
             int cont = 1;

@@ -108,6 +108,7 @@ public abstract class Senha
                 ps.setString(2, cripto(email, senha, true));
                 ResultSet rs = ps.executeQuery();
                 if(rs.next()) return rs.getInt(1);
+                else return -1;
             }
             ds.getConexao().close();
         }

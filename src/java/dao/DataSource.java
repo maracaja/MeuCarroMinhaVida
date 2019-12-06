@@ -15,11 +15,11 @@ public final class DataSource
 
     public DataSource() throws SQLException
     {
-        setNomeHost("127.0.0.1");
+        setNomeHost("remotemysql.com");
         setPorta(3306);
-        setBD("ecommerce");
-        setUsuario("comercio");
-        setSenha("Projeto2019");
+        setBD("VkrJZznf3G");
+        setUsuario("VkrJZznf3G");
+        setSenha("RfJsps9jWH");
         try
         {
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());

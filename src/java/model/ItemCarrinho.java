@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Locale;
+
 public class ItemCarrinho 
 {
     private Produto p;
@@ -30,5 +32,5 @@ public class ItemCarrinho
     { return getProduto().getPreco() * getQtd(); }
     
     public String getPrecoString()
-    { return String.format("R$ %,.2f", this.getPreco()); }
+    { return String.format(Locale.forLanguageTag("pt-BR"), "R$ %1$,.2f", this.getPreco()); }
 }

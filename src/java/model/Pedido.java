@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
 
 @SuppressWarnings("serial")
 public final class Pedido implements java.io.Serializable
@@ -100,6 +101,6 @@ public final class Pedido implements java.io.Serializable
     
     public String getPrecoString()
     {
-        return String.format("R$ %,.2f", this.precoTotal());
+        return String.format(Locale.forLanguageTag("pt-BR"), "R$ %1$,.2f", this.precoTotal());
     }   
 }

@@ -59,10 +59,10 @@ public class PedidoDAO
                     ps2.setInt(4*i + 2, p.getItens().get(i).getProduto().getId());
                     ps2.setDouble(4*i + 3, p.getItens().get(i).getPrecoUnitario());
                     ps2.setInt(4*i + 4, p.getItens().get(i).getQuantidade());
-                    result = ps2.executeUpdate();
-                    if (result == 0)
-                        throw new RuntimeException("Erro na inserção de dados");
                 }
+                result = ps2.executeUpdate();
+                if (result == 0)
+                    throw new RuntimeException("Erro na inserção de dados");
             }
         } 
         catch (Exception e) 

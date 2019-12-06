@@ -63,7 +63,7 @@ public class EditarProdutoServlet extends HttpServlet
                 {
                     String nomeArq = Admin.geraNome();
                     String ext = Admin.capturaExtensao(request.getPart("foto" + i).getSubmittedFileName());
-                    url = String.format("%s%s%s.%s", getServletContext().getRealPath("/WEB-INF/img"), File.separator, nomeArq, ext);
+                    url = String.format("%s%s%s.%s", getServletContext().getRealPath("/img"), File.separator, nomeArq, ext);
                     relativa[i - 1] = String.format("img/%s.%s", nomeArq, ext);
                     Admin.uploadFoto(request, "foto" + i, url);
                 }

@@ -5,6 +5,7 @@ import dao.ProdutoDAO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
 
 public class Carrinho 
@@ -104,7 +105,7 @@ public class Carrinho
     { return total; }
     
     public String getTotalString()
-    { return String.format("R$ %,.2f", getTotal()); }
+    { return String.format(Locale.forLanguageTag("pt-BR"), "R$ %1$,.2f", getTotal()); }
     
     public ArrayList<ItemCarrinho> getItens()
     {

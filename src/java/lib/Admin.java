@@ -2,20 +2,19 @@ package lib;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 import javax.imageio.stream.ImageOutputStream;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.Part;
 import model.Cliente;
 import model.Pedido;
 
@@ -71,7 +70,7 @@ public abstract class Admin
         double soma = 0.0;
         for (Pedido p : lista)
             soma += p.precoTotal();
-        return String.format("R$ %,.2f", soma);
+        return String.format(Locale.forLanguageTag("pt-BR"), "R$ %1$,.2f", soma);
     }
     
     public static void uploadFoto(HttpServletRequest request, String nomeParte, String urlFoto) throws IOException, ServletException

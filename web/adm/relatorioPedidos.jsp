@@ -39,6 +39,7 @@
                             &nbsp;&nbsp;&nbsp;
                             <input type="submit" class="btn btn-success"/>
                         </form>
+                        <br/>
                     </div>
                     <hr/>
                     <div class="row table-responsive">

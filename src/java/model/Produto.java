@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Locale;
+
 @SuppressWarnings("serial")
 public class Produto implements java.io.Serializable
 {  
@@ -89,7 +91,7 @@ public class Produto implements java.io.Serializable
     
     public String getPrecoString()
     {
-        return String.format("R$ %,.2f", getPreco());
+        return String.format(Locale.forLanguageTag("pt-BR"), "R$ %1$,.2f", getPreco());
     }
 
     public void setPreco(double preco) {

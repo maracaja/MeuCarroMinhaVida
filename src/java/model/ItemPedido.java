@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Locale;
+
 @SuppressWarnings("serial")
 public final class ItemPedido implements java.io.Serializable
 {
@@ -50,6 +52,6 @@ public final class ItemPedido implements java.io.Serializable
     
     public String getPrecoString(boolean unitario)
     {
-        return String.format("R$ %,.2f", unitario ? this.getPrecoUnitario() : this.getPreco());
+        return String.format(Locale.forLanguageTag("pt-BR"), "R$ %1$,.2f", unitario ? this.getPrecoUnitario() : this.getPreco());
     }
 }

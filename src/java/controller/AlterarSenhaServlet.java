@@ -43,7 +43,11 @@ public class AlterarSenhaServlet extends HttpServlet
         try 
         {
             int id = Senha.testaLogin(cli.getEmail(), request.getParameter("senhaAtual"));
-            if(id == -1) request.setAttribute("Aviso", "Senha inválida!");
+            if(id == -1)
+            {
+                request.setAttribute("Aviso", "Senha inválida!");
+                request.setAttribute("Alterado", Boolean.FALSE);
+            }
             else 
             {
                 request.setAttribute("Aviso", "");
@@ -51,9 +55,9 @@ public class AlterarSenhaServlet extends HttpServlet
                 ClienteDAO dao = new ClienteDAO(ds);
                 dao.updateSenha(cli, request.getParameter("senhaNova"));
                 ds.getConexao().close();
-                destino = "/alterarSenha.jsp";
                 request.setAttribute("Alterado", Boolean.TRUE);
             }
+            destino = "/alterarSenha.jsp";
         }
         catch (SQLException e) 
         {

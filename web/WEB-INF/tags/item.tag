@@ -9,7 +9,9 @@
         <c:forEach var="itemPedido" items="${lista}">
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <img src="${itemPedido.getProduto().getUrlFoto1()}" alt="Foto" class="imgVitrine" />
+                    <a href="detalheProduto?id=${itemPedido.getProduto().getId()}">
+                        <img src="${itemPedido.getProduto().getUrlFoto1()}" alt="Foto" class="imgVitrine"/>
+                    </a>
                 </div>
                 <div class="col-md-6">
                     <div class="row h3">
