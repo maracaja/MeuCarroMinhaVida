@@ -1,0 +1,5 @@
+<%@ page pageEncoding="ISO-8859-1" %>
+<br/>
+<div class="row h6 modal-footer">
+    Este site foi desenvolvido por Sérgio Maracajá Junior e Rafael da Silva como projeto final da disciplina MCZA019 - Programação para Web (curso de Bacharelado em Ciência da Computação da UFABC), ministrada pelo Prof. Dr. Francisco Isidro Massetto.
+</div>
