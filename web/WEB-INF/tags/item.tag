@@ -42,7 +42,9 @@
         <c:forEach var="produto" items="${lista}">
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <img src="${produto.getUrlFoto1()}" alt="Foto" class="imgVitrine" />
+                    <a href="detalheProduto?id=${produto.getId()}">
+                        <img src="${produto.getUrlFoto1()}" alt="Foto" class="imgVitrine"/>
+                    </a>
                 </div>
                 <div class="col-md-5">
                     <div class="row h3">
