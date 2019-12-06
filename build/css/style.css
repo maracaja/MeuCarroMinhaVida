@@ -1,0 +1,133 @@
+body
+{
+    background-color: #feffe6;
+}
+
+.comprar
+{
+    font-size: 24pt;
+}
+
+.dados
+{
+    border: 2px black;
+}
+
+.erro
+{
+    font-size: 42pt;
+}
+
+.estilo-1
+{
+    color: crimson;
+}
+
+.estilo-2
+{
+    color: orangered;
+}
+
+.estilo-3
+{
+    color: gold;
+}
+
+.estilo-4
+{
+    color: limegreen;
+}
+
+.estilo-5
+{
+    color: green;
+}
+
+.estilo-0
+{
+    color: lightgray;
+}
+
+.imgErro
+{
+    height: 42pt;
+    margin-bottom: 3pt;
+}
+
+.iconeCegonha
+{
+    height: 20px;
+}
+
+.img-h2
+{
+    height: 75px;
+}
+
+.imgVitrine
+{
+    align-content: center;
+    width: 50%;
+}
+
+.imgMarca
+{
+    height: 40px;
+}
+
+.imgMini
+{
+    height: 80px;
+}
+
+.imgCarrinho
+{
+    height: 100px;
+}
+
+.inputDetalhes
+{
+    text-align: center;
+    width: 60px; 
+}
+
+.login
+{
+    width: 70%;
+}
+
+a.mais:link, a.mais:visited, a.mais:active, a.mais:hover, a.menos:link, a.menos:visited, a.menos:active, a.menos:hover
+{
+    text-decoration: none;
+}
+
+.active
+{
+    padding-top: 15px;
+}
+
+nav .container-fluid
+{
+    background-color: #eeffe6;
+}
+ 
+textarea
+{
+    height: 250px;
+}
+ 
+#titulo
+{
+    font-size: 40px;
+}
+
+#totalCarrinho
+{
+    font-size: 32px;
+}
+
+.warning
+{
+    color: red;
+    font-weight: lighter;
+}
